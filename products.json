@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "title": "Momo",
+        "description": "Una perrita muy linda, con una dueña que esta muy buena",
+        "price": 1,
+        "thumbnail": "img",
+        "code": 4556,
+        "stock": 1
+    },
+    {
+        "id": 2,
+        "title": "Guitarra",
+        "description": "Guitarra Tayor en madera de Roble",
+        "price": 300,
+        "thumbnail": "img",
+        "code": 1234,
+        "stock": 5
+    }
+]
