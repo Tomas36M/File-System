@@ -87,6 +87,8 @@ class ProductManager {
 
             await fs.promises.writeFile(this.path, JSON.stringify(products, null, 2))
 
+            console.log('Se ha agregado el siguiente producto a la lista: ', products[products.length - 1] );
+
         } else {
 
             this.writeFile(title, description, price, thumbnail, code, stock);
@@ -108,10 +110,9 @@ class ProductManager {
         const changingObj = products.find(el => el.id == id)
 
         if (changingObj) {
-
             changingObj[key] = value;
             products.splice(id - 1,1,changingObj);
-
+            console.log(`El producto con ${id} ha cambiado`);
         } else {
             console.log(`El id: ${id} no existe`);
         }
@@ -134,6 +135,7 @@ class ProductManager {
 
         if (deletedObj) {
             products.splice(id - 1,1);
+            console.log(`El producto con id: ${id} se ha eliminado`);
         } else {
             console.log(`El id: ${id} no existe`);
         }
@@ -147,13 +149,13 @@ const allProducts = new ProductManager();
 
 const callMethods = async () => {
 
-    // await allProducts.addProduct('Momo', 'Una perrita muy linda, con una dueña que esta muy buena', 1, 'img', 4556, 1)
+    await allProducts.addProduct('Momo', 'Una perrita muy linda, con una dueña que esta muy buena', 1, 'img', 4556, 1)
 
-    // await allProducts.addProduct('Guitarra', 'Guitarra Tayor en madera de Roble', 300, 'img', 1234, 5)
+    await allProducts.addProduct('Play 5', 'Consola de videojuegos SONY en perfecto estado', 300, 'img', 7978, 20)
 
     // await allProducts.getProductById(2)
 
-    await allProducts.updateProduct(1, 'title', 'Momo');
+    // await allProducts.updateProduct(1, 'title', 'Sasha');
 
     // await allProducts.deleteProduct(2)
 

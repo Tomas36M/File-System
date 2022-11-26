@@ -7,5 +7,32 @@
     "thumbnail": "img",
     "code": 4556,
     "stock": 1
+  },
+  {
+    "id": 2,
+    "title": "Guitarra",
+    "description": "Guitarra Tayor en madera de Roble",
+    "price": 300,
+    "thumbnail": "img",
+    "code": 1234,
+    "stock": 5
+  },
+  {
+    "id": 3,
+    "title": "Play 4",
+    "description": "Consola de videojuegos SONY en perfecto estado",
+    "price": 300,
+    "thumbnail": "img",
+    "code": 7979,
+    "stock": 20
+  },
+  {
+    "id": 4,
+    "title": "Play 5",
+    "description": "Consola de videojuegos SONY en perfecto estado",
+    "price": 300,
+    "thumbnail": "img",
+    "code": 7978,
+    "stock": 20
   }
 ]
