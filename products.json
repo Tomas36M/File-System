@@ -11,7 +11,7 @@
   {
     "id": 2,
     "title": "Guitarra",
-    "description": "Guitarra Tayor en madera de Roble",
+    "description": "Guitarra Taylor en madera de Roble",
     "price": 300,
     "thumbnail": "img",
     "code": 1234,
@@ -28,8 +28,8 @@
   },
   {
     "id": 4,
-    "title": "Play 5",
-    "description": "Consola de videojuegos SONY en perfecto estado",
+    "title": "Gamecube",
+    "description": "Consola de Nintendo",
     "price": 300,
     "thumbnail": "img",
     "code": 7978,

@@ -97,7 +97,7 @@ class ProductManager {
 
     }
 
-    updateProduct = async (id, key, value) => {
+    updateProduct = async (id, updateValues) => {
 
         const content = await fs.promises.readFile(this.path, 'utf-8');
         
@@ -110,8 +110,8 @@ class ProductManager {
         const changingObj = products.find(el => el.id == id)
 
         if (changingObj) {
-            changingObj[key] = value;
-            products.splice(id - 1,1,changingObj);
+            const updatedObj = {...changingObj, ...updateValues}
+            products.splice(id - 1,1,updatedObj);
             console.log(`El producto con ${id} ha cambiado`);
         } else {
             console.log(`El id: ${id} no existe`);
@@ -149,13 +149,13 @@ const allProducts = new ProductManager();
 
 const callMethods = async () => {
 
-    await allProducts.addProduct('Momo', 'Una perrita muy linda, con una dueña que esta muy buena', 1, 'img', 4556, 1)
+    // await allProducts.addProduct('Momo', 'Una perrita muy linda, con una dueña que esta muy buena', 1, 'img', 4556, 1)
 
-    await allProducts.addProduct('Play 5', 'Consola de videojuegos SONY en perfecto estado', 300, 'img', 7978, 20)
+    // await allProducts.addProduct('Play 5', 'Consola de videojuegos SONY en perfecto estado', 300, 'img', 7978, 20)
 
     // await allProducts.getProductById(2)
 
-    // await allProducts.updateProduct(1, 'title', 'Sasha');
+    await allProducts.updateProduct(4, {title: "Gamecube",description:"Consola de Nintendo"});
 
     // await allProducts.deleteProduct(2)
 
